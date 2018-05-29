@@ -15,4 +15,8 @@ class BusStop
     @queue.push(passenger)
   end
 
+  def empty_queue()
+    @queue = []
+  end
+
 end
