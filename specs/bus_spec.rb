@@ -35,4 +35,10 @@ class BusTest < MiniTest::Test
     assert_equal(0, @bus1.count_passengers())
   end
 
+  def test_bus_empty
+    @bus1.pickup(@passenger1)
+    @bus1.pickup(@passenger2)
+    @bus1.empty()
+    assert_equal(0, @bus1.count_passengers)
+  end
 end
