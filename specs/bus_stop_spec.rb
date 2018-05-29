@@ -17,4 +17,12 @@ class BusStopTest < MiniTest::Test
     assert_equal("Prince's street", @bus_stop1.name())
   end
 
+  def test_queue_count
+    assert_equal(0, @bus_stop1.length_of_queue())
+  end
+
+  def test_add_person_to_queue
+    @bus_stop1.add_to_queue(@passenger1)
+    assert_equal(1, @bus_stop1.length_of_queue())
+  end
 end
